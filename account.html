@@ -1,14 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/root.css" />
     <title>Личный кабинет</title>
-</head>
-<body>
+  </head>
+  <body>
+    <main>Выйти из аккаунта <button>Выйти</button></main>
 
-</body>
+    <div class="accept_competition">
+      <h2>Принять участие в конкурсе</h2>
+      <form>
+        <label for="competition">Выберите конкурс</label>
+        <select required id="competition" name="competition">
+          <option value="rocket_design">Создайте свой макет ракеты</option>
+          <option value="see_cosmos">Посмотрите на космос</option>
+          <option value="how_rocket_work">Узнайте как устроена ракета</option>
+          <option value="Earth_analogs">Какие есть аналоги земли?</option>
+          <option value="Museum_of_cosmos">Музей космоса</option>
+        </select>
+
+        <label for="date">Дата</label>
+        <input required id="date" name="date" type="date" />
+
+        <label for="time">Время</label>
+        <input required id="time" name="time" type="time" />
+
+        <label for="amount_members">Количество участников</label>
+        <input
+          required
+          id="amount_members"
+          name="amount_members"
+          type="number"
+        />
+
+        <button>Записаться</button>
+      </form>
+    </div>
+  </body>
 </html>
