@@ -1,14 +1,366 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="ru" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/root.css" />
-    <title>Главная</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/index-light.css" />
+    <title>Моя семья - мой космос</title>
+  </head>
 
-</body>
+  <body>
+    <header>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-contact-round-icon lucide-contact-round"
+      >
+        <path d="M16 2v2" />
+        <path d="M17.915 22a6 6 0 0 0-12 0" />
+        <path d="M8 2v2" />
+        <circle cx="12" cy="12" r="4" />
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+      </svg>
+      <nav>
+        <a href="./registration.html">Регистрация</a
+        ><a href="#login">Авторизация</a
+        ><a href="./account.html">Личный кабинет</a>
+        <a href="#about-us">О нас</a><a href="#competitions">Конкурсы</a>
+        <a href="#search-competitions">Поиск</a><a href="#contacts">Контакты</a>
+        <a href="./index-light.html">
+          <button class="btn-sm btn-ghost">
+            <img src="./images/moon.svg" alt="фото луны" />
+          </button>
+        </a>
+      </nav>
+      <button class="btn-sm btn-ghost menu">
+        <img src="./images/menu.svg" alt="кнопка меню" />
+      </button>
+    </header>
+
+    <h1>Моя семья - мой космос</h1>
+
+    <section class="competitions-slider">
+      <div class="competitions-slider_current">
+        <img
+          src="./images/index/family_and_cosmos.jpg"
+          alt="фото космоса и семьи"
+          class="competitions-slider_current_img"
+        />
+
+        <h3>
+          Создайте свой макет ракеты
+          <img src="./images/star.svg" alt="Фото звезды" /> 4.9/5
+        </h3>
+        <a class="details" href="./competition.html"
+          ><button class="btn-sm">Подробнее</button></a
+        >
+
+        <div class="accordion-arrow accordion-arrow-left"><</div>
+        <div class="accordion-arrow accordion-arrow-right">></div>
+      </div>
+      <div class="dots">
+        <div class="dot dot-active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <section class="login" id="login">
+      <form>
+        <h3>Авторизация</h3>
+        <div class="form_item">
+          <label for="email">Почта</label>
+          <input
+            required
+            id="email"
+            name="email"
+            type="text"
+            placeholder="example@email.ru"
+          />
+        </div>
+
+        <div class="form_item">
+          <div class="action_label">
+            <label for="password">Пароль</label>
+            <a href="#">Забыли пароль?</a>
+          </div>
+
+          <input
+            required
+            id="password"
+            name="password"
+            type="password"
+            placeholder="********"
+          />
+        </div>
+        <button class="btn-inverse">Войти</button>
+      </form>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <div class="information">
+        <h2>О нас</h2>
+        <p>
+          <b>Моя семья - мой космос</b> это мероприятие предназначенной для
+          укреплений связей в семье, попробуйте разные конкурсы, порешайте
+          нелегкие задачи на тему <b>Космоса</b>.
+        </p>
+      </div>
+      <img src="./images/index/around_earth.jpg" alt="фото земли" />
+    </section>
+  </body>
+
+  <section class="hello">
+    <h2>Приветсвие от организаторов</h2>
+    <video src="./videos/hello.mp4" autoplay="autoplay" loop controls />
+  </section>
+
+  <section class="search-competitions" id="search-competitions">
+    <div class="form_item">
+      <label for="search-competitions">Поиск конкурсов</label>
+      <input
+        id="search-competitions"
+        name="search-competitions"
+        type="text"
+        placeholder="Макет ракеты"
+      />
+    </div>
+  </section>
+
+  <section class="competitions" id="competitions">
+    <div class="competitions_top">
+      <h2>Конкурсы</h2>
+      <a href="./schedule.html"><button class="btn-sm">Расписание</button></a>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th class="tb_desctiption">Описание</th>
+          <th class="tb_photo">Фото</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tb_desctiption">
+            <h3>Создайте свой макет ракеты</h3>
+            <p>
+              Вам предстоит изготовить макет ракеты из предоставленных
+              материалов и инструкции. А затем кинуть её как можно выше.
+            </p>
+            <div class="raiting">Оценка 4.9/5</div>
+            <div class="openSlots">Осталось мест: 5</div>
+          </td>
+          <td class="tb_photo">
+            <img
+              src="./images/index/maket-raketi-vostok-11.jpg"
+              alt="фото ракеты"
+            />
+          </td>
+          <td>
+            <button class="btn-sm">Участвовать</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="tb_desctiption">
+            <h3>Посмотрите на космос</h3>
+            <p>
+              Через телескоп росмотрите на космос и попробуйте угадать какие
+              обькты чем они явщяются.
+            </p>
+            <div class="raiting">Оценка 4.7/5</div>
+            <div class="openSlots">Осталось мест: 12</div>
+          </td>
+          <td class="tb_photo">
+            <img src="./images/index/cosmos.png" alt="фото космоса" />
+          </td>
+          <td>
+            <button class="btn-sm">Участвовать</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="tb_desctiption">
+            <h3>Узнайте как устроена ракета</h3>
+            <p>
+              Мы расскажем как устроена внутри себя ракета и запустим её
+              прототип.
+            </p>
+            <div class="raiting">Оценка 4.3/5</div>
+            <div class="openSlots">Осталось мест: 24</div>
+          </td>
+          <td class="tb_photo">
+            <img
+              src="./images/index/rocket_inside.jpg"
+              alt="фото кабины ракеты"
+            />
+          </td>
+          <td>
+            <button class="btn-sm">Участвовать</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="tb_desctiption">
+            <h3>Какие есть аналоги земли?</h3>
+            <p>
+              Здесь мы вам расскажем какие учёные рассматривают самые похожие
+              аналоги земли, где люди смогут жить.
+            </p>
+            <div class="raiting">Оценка 4/5</div>
+            <div class="openSlots">Осталось мест: 10</div>
+          </td>
+          <td class="tb_photo">
+            <img
+              src="./images/index/earth_analog.jpg"
+              alt="фото планеты похожей на землю"
+            />
+          </td>
+          <td>
+            <button class="btn-sm">Участвовать</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="tb_desctiption">
+            <h3>Музей космоса</h3>
+            <p>
+              Астеройды, звезды, планеты, вселенная и другое можно увидеть в
+              нашем музее.
+            </p>
+            <div class="raiting">Оценка 4.6/5</div>
+            <div class="openSlots">Осталось мест: 96</div>
+          </td>
+          <td class="tb_photo">
+            <img
+              src="./images/index/museum.jpg"
+              alt="фото музей космонавтики"
+            />
+          </td>
+          <td>
+            <button class="btn-sm">Участвовать</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="reviews">
+    <h2>Отзывы</h2>
+    <div class="reviews_accordion">
+      <div class="accordion-arrow"><</div>
+      <div class="reviews_data">
+        <div class="card review">
+          <div class="avatar_card">
+            <img
+              class="avatar"
+              src="./images/index/woman-avatar-1.jpg"
+              alt="фото аватара"
+            />
+            <h3>Анна</h3>
+          </div>
+          <a href="./competition.html">Конкурс: Создайте свой макет ракеты</a>
+          <p>
+            Мне очень понравилось делать макет ракеты это было так интересно и
+            увлекательно, хотя ракета далеко не полетела.
+          </p>
+          <span class="date">08.07.2023</span>
+        </div>
+
+        <div class="card review">
+          <div class="avatar_card">
+            <img
+              class="avatar"
+              src="./images/index/avatar-man-1.jpg"
+              alt="фото аватара"
+            />
+            <h3>Григорий</h3>
+          </div>
+          <a href="#">Конкурс: Посмотрите на космос</a>
+          <p>
+            Я впервые разглядел планеты через телескоп, это было очень
+            завораживающе.
+          </p>
+          <span class="date">08.07.2023</span>
+        </div>
+
+        <div class="card review">
+          <div class="avatar_card">
+            <img
+              class="avatar"
+              src="./images/index/avatar-woman-2.jpg"
+              alt="фото аватара"
+            />
+            <h3>Виктория</h3>
+          </div>
+          <a href="#">Конкурс: Какие есть аналоги земли</a>
+          <p>
+            Я с моим мужем работаем в сфере исследования неизведанных небесных
+            тел, и мы можем подтвердить, что информация была достоверной.
+          </p>
+          <span class="date">08.07.2023</span>
+        </div>
+      </div>
+      <div class="accordion-arrow">></div>
+    </div>
+  </section>
+
+  <section class="accept">
+    <h2>Принять участие в мероприятии</h2>
+
+    <form>
+      <h3>Подписаться на новости</h3>
+
+      <div class="form_item">
+        <label for="email">Почта</label>
+        <input
+          required
+          id="email"
+          name="email"
+          type="text"
+          placeholder="example@email.ru"
+        />
+      </div>
+
+      <label for="password"
+        ><input id="hadnle_data" name="hadnle_data" type="checkbox" required />
+        Согласие на обработку личных данных</label
+      >
+
+      <button>Подписаться</button>
+    </form>
+  </section>
+
+  <footer id="contacts">
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <a href="mailto:family@cosmos.ru">Email: family@cosmos.ru</a>
+      <a href="tel:+74842234567">Телефон: +7 (4842) 23-45-67</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Навигация</h4>
+      <a href="./index.html">Главная</a>
+      <a href="./index-light.html">Главная-светлая</a
+      ><a href="./registration.html">Регистрация</a>
+      <a href="./competition.html">Конкурс</a>
+      <a href="./account.html">Личный кабинет</a>
+      <a href="./404.html">Страница не найдена</a>
+    </div>
+  </footer>
 </html>

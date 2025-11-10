@@ -1,0 +1,12 @@
+.light {
+  --primary: #5385e9;
+  --background: #f4f4f4;
+  --foreground: #0a0a0a;
+  --foregound-muted: #656565;
+  --card: #d5d2d2;
+  --card-light: #eeeeee;
+  --card-light-hover: #fcfcfc;
+  --border: #aeaeae;
+
+  --is-dark: 0;
+}
