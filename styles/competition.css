@@ -1,0 +1,41 @@
+.competition {
+  max-width: 600px;
+  margin: auto;
+  padding: 100px;
+}
+
+.competition .main_image {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.competition .review {
+  display: none;
+}
+
+@media print {
+  * {
+    filter: grayscale(1) !important;
+  }
+
+  .competition .information {
+    display: none;
+  }
+
+  .competition .review {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .competitions .tb_desctiption {
+    width: auto;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .competition {
+    padding: 40px;
+  }
+}

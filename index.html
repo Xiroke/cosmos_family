@@ -35,21 +35,40 @@
       <nav>
         <a href="./registration.html">Регистрация</a
         ><a href="#login">Авторизация</a
-        ><a href="./account.html">Личный кабинет</a> <a href="#aboutUs">О нас</a
-        ><a href="./competition.html">Конкурсы</a> <a href="#search">Поиск</a
-        ><a href="#сontacts">Контакты</a>
-        <button>Тема</button>
+        ><a href="./account.html">Личный кабинет</a>
+        <a href="#about-us">О нас</a><a href="#competitions">Конкурсы</a>
+        <a href="#search-competitions">Поиск</a><a href="#contacts">Контакты</a>
+        <a href="./index-light.html">
+          <button class="btn-sm btn-ghost">
+            <img src="./images/sun.svg" alt="" />
+          </button>
+        </a>
       </nav>
+      <button class="btn-sm btn-ghost menu">
+        <img src="./images/menu.svg" alt="кнопка меню" />
+      </button>
     </header>
 
     <h1>Моя семья - мой космос</h1>
 
     <section class="competitions-slider">
       <div class="competitions-slider_current">
-        <img src="./images/index/family_and_cosmos.jpg" alt="" />
-        <h3>Создайте свой макет ракеты</h3>
-        <div class="arrow arrow-left"><</div>
-        <div class="arrow arrow-right">></div>
+        <img
+          src="./images/index/family_and_cosmos.jpg"
+          alt="фото космоса и семьи"
+          class="competitions-slider_current_img"
+        />
+
+        <h3>
+          Создайте свой макет ракеты
+          <img src="./images/star.svg" alt="Фото звезды" /> 4.9/5
+        </h3>
+        <a class="details" href="./competition.html"
+          ><button class="btn-sm">Подробнее</button></a
+        >
+
+        <div class="accordion-arrow accordion-arrow-left"><</div>
+        <div class="accordion-arrow accordion-arrow-right">></div>
       </div>
       <div class="dots">
         <div class="dot dot-active"></div>
@@ -61,7 +80,7 @@
 
     <section class="login" id="login">
       <form>
-        <h2>Авторизация</h2>
+        <h3>Авторизация</h3>
         <div class="form_item">
           <label for="email">Почта</label>
           <input
@@ -91,7 +110,7 @@
       </form>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="information">
         <h2>О нас</h2>
         <p>
@@ -109,7 +128,23 @@
     <video src="./videos/hello.mp4" autoplay="autoplay" loop controls />
   </section>
 
-  <section class="competitions">
+  <section class="search-competitions" id="search-competitions">
+    <div class="form_item">
+      <label for="search-competitions">Поиск конкурсов</label>
+      <input
+        id="search-competitions"
+        name="search-competitions"
+        type="text"
+        placeholder="Макет ракеты"
+      />
+    </div>
+  </section>
+
+  <section class="competitions" id="competitions">
+    <div class="competitions_top">
+      <h2>Конкурсы</h2>
+      <a href="./schedule.html"><button class="btn-sm">Расписание</button></a>
+    </div>
     <table>
       <thead>
         <tr>
@@ -121,7 +156,7 @@
       <tbody>
         <tr>
           <td class="tb_desctiption">
-            <h4>Создайте свой макет ракеты</h4>
+            <h3>Создайте свой макет ракеты</h3>
             <p>
               Вам предстоит изготовить макет ракеты из предоставленных
               материалов и инструкции. А затем кинуть её как можно выше.
@@ -142,7 +177,7 @@
 
         <tr>
           <td class="tb_desctiption">
-            <h4>Посмотрите на космос</h4>
+            <h3>Посмотрите на космос</h3>
             <p>
               Через телескоп росмотрите на космос и попробуйте угадать какие
               обькты чем они явщяются.
@@ -160,7 +195,7 @@
 
         <tr>
           <td class="tb_desctiption">
-            <h4>Узнайте как устроена ракета</h4>
+            <h3>Узнайте как устроена ракета</h3>
             <p>
               Мы расскажем как устроена внутри себя ракета и запустим её
               прототип.
@@ -181,7 +216,7 @@
 
         <tr>
           <td class="tb_desctiption">
-            <h4>Какие есть аналоги земли?</h4>
+            <h3>Какие есть аналоги земли?</h3>
             <p>
               Здесь мы вам расскажем какие учёные рассматривают самые похожие
               аналоги земли, где люди смогут жить.
@@ -202,7 +237,7 @@
 
         <tr>
           <td class="tb_desctiption">
-            <h4>Музей космоса</h4>
+            <h3>Музей космоса</h3>
             <p>
               Астеройды, звезды, планеты, вселенная и другое можно увидеть в
               нашем музее.
@@ -224,71 +259,63 @@
     </table>
   </section>
 
-  <section class="search-competitions">
-    <div class="form_item">
-      <label for="search-competitions">Поиск конкурсов</label>
-      <input
-        id="search-competitions"
-        name="search-competitions"
-        type="text"
-        placeholder="Макет ракеты"
-      />
-    </div>
-  </section>
-
   <section class="reviews">
     <h2>Отзывы</h2>
-    <div class="reviews_data">
-      <div class="card review">
-        <div class="review_top">
-          <img
-            class="avatar"
-            src="./images/index/woman-avatar-1.jpg"
-            alt="фото аватара"
-          />
-          <h3>Анна</h3>
+    <div class="reviews_accordion">
+      <div class="accordion-arrow"><</div>
+      <div class="reviews_data">
+        <div class="card review">
+          <div class="avatar_card">
+            <img
+              class="avatar"
+              src="./images/index/woman-avatar-1.jpg"
+              alt="фото аватара"
+            />
+            <h3>Анна</h3>
+          </div>
+          <a href="./competition.html">Конкурс: Создайте свой макет ракеты</a>
+          <p>
+            Мне очень понравилось делать макет ракеты это было так интересно и
+            увлекательно, хотя ракета далеко не полетела.
+          </p>
+          <span class="date">08.07.2023</span>
         </div>
-        <span>Конкурс: Создайте свой макет ракеты</span>
-        <p>
-          Мне очень понравилось делать макет ракеты это было так интересно и
-          увлекательно, хотя ракета далеко не полетела.
-        </p>
-        <span class="date">08.07.2023</span>
-      </div>
 
-      <div class="card review">
-        <div class="review_top">
-          <img
-            class="avatar"
-            src="./images/index/avatar-man-1.jpg"
-            alt="фото аватара"
-          />
-          <h3>Григорий</h3>
+        <div class="card review">
+          <div class="avatar_card">
+            <img
+              class="avatar"
+              src="./images/index/avatar-man-1.jpg"
+              alt="фото аватара"
+            />
+            <h3>Григорий</h3>
+          </div>
+          <a href="#">Конкурс: Посмотрите на космос</a>
+          <p>
+            Я впервые разглядел планеты через телескоп, это было очень
+            завораживающе.
+          </p>
+          <span class="date">08.07.2023</span>
         </div>
-        <span>Конкурс: Посмотрите на космос</span>
-        <p>
-          Я впервые разглядел планеты через телескоп, это было очень
-          завораживающе.
-        </p>
-        <span class="date">08.07.2023</span>
-      </div>
 
-      <div class="card review">
-        <div class="review_top">
-          <img
-            class="avatar"
-            src="./images/index/avatar-woman-2.jpg"
-            alt="фото аватара"
-          />
-          <h3>Виктория</h3>
+        <div class="card review">
+          <div class="avatar_card">
+            <img
+              class="avatar"
+              src="./images/index/avatar-woman-2.jpg"
+              alt="фото аватара"
+            />
+            <h3>Виктория</h3>
+          </div>
+          <a href="#">Конкурс: Какие есть аналоги земли</a>
+          <p>
+            Я с моим мужем работаем в сфере исследования неизведанных небесных
+            тел, и мы можем подтвердить, что информация была достоверной.
+          </p>
+          <span class="date">08.07.2023</span>
         </div>
-        <span>Конкурс: Какие есть аналоги земли</span>
-        <p>
-          Я с моим мужем работаем в сфере исследования неизведанных небесных
-          тел, и мы можем подтвердить, что информация была достоверной.
-        </p>
-        <span class="date">08.07.2023</span>
       </div>
+      <div class="accordion-arrow">></div>
     </div>
   </section>
 
@@ -296,7 +323,7 @@
     <h2>Принять участие в мероприятии</h2>
 
     <form>
-      <h2>Авторизация</h2>
+      <h3>Подписаться на новости</h3>
 
       <div class="form_item">
         <label for="email">Почта</label>
@@ -314,15 +341,15 @@
         Согласие на обработку личных данных</label
       >
 
-      <button>Принять</button>
+      <button>Подписаться</button>
     </form>
   </section>
 
-  <footer>
+  <footer id="contacts">
     <div class="footer-col">
       <h4>Контакты</h4>
-      <a href="#">Email: family@cosmos.ru</a>
-      <a href="#">Телефон: +7 (4842) 23-45-67</a>
+      <a href="mailto:family@cosmos.ru">Email: family@cosmos.ru</a>
+      <a href="tel:+74842234567">Телефон: +7 (4842) 23-45-67</a>
     </div>
 
     <div class="footer-col">

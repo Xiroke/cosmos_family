@@ -8,39 +8,75 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/root.css" />
+    <link rel="stylesheet" href="styles/account.css" />
     <title>Личный кабинет</title>
   </head>
   <body>
-    <main>Выйти из аккаунта <button>Выйти</button></main>
+    <section class="account">
+      <div class="">
+        <h2>Аккаунт</h2>
+        <main class="profile">
+          <div class="avatar_card">
+            <div class="avatar">12</div>
+            Пользователь #1234
+          </div>
 
-    <div class="accept_competition">
-      <h2>Принять участие в конкурсе</h2>
-      <form>
-        <label for="competition">Выберите конкурс</label>
-        <select required id="competition" name="competition">
-          <option value="rocket_design">Создайте свой макет ракеты</option>
-          <option value="see_cosmos">Посмотрите на космос</option>
-          <option value="how_rocket_work">Узнайте как устроена ракета</option>
-          <option value="Earth_analogs">Какие есть аналоги земли?</option>
-          <option value="Museum_of_cosmos">Музей космоса</option>
-        </select>
+          <div class="actions">
+            <h3>Действия</h3>
+            <div class="actions_item">
+              Выйти из аккаунта <button class="btn-sm">Выйти</button>
+            </div>
+          </div>
+        </main>
+      </div>
 
-        <label for="date">Дата</label>
-        <input required id="date" name="date" type="date" />
+      <div class="accept_competition">
+        <form>
+          <h3>Принять участие в конкурсе</h3>
+          <div class="form_item">
+            <label for="competition">Выберите конкурс</label>
+            <select required id="competition" name="competition">
+              <option value="rocket_design">Создайте свой макет ракеты</option>
+              <option value="see_cosmos">Посмотрите на космос</option>
+              <option value="how_rocket_work">
+                Узнайте как устроена ракета
+              </option>
+              <option value="Earth_analogs">Какие есть аналоги земли?</option>
+              <option value="Museum_of_cosmos">Музей космоса</option>
+            </select>
+          </div>
 
-        <label for="time">Время</label>
-        <input required id="time" name="time" type="time" />
+          <div class="form_item">
+            <label for="date">Дата</label>
+            <input
+              required
+              id="date"
+              name="date"
+              type="date"
+              value="2024-07-08"
+              readonly
+            />
+          </div>
 
-        <label for="amount_members">Количество участников</label>
-        <input
-          required
-          id="amount_members"
-          name="amount_members"
-          type="number"
-        />
+          <div class="form_item">
+            <label for="time">Время</label>
+            <input required id="time" name="time" type="time" min="09:00"
+            max="21:00/>
+          </div>
 
-        <button>Записаться</button>
-      </form>
-    </div>
+          <div class="form_item">
+            <label for="amount_members">Количество участников</label>
+            <input
+              required
+              id="amount_members"
+              name="amount_members"
+              type="number"
+            />
+          </div>
+
+          <button>Записаться</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>

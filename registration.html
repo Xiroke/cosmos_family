@@ -8,65 +8,118 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/root.css" />
+    <link rel="stylesheet" href="styles/registration.css" />
     <title>Регистрация</title>
   </head>
   <body>
     <section class="registration">
-      <h2>Регистрация</h2>
+      <h3>Регистрация</h3>
       <form>
-        <label for="email">Почта</label>
-        <input
-          required
-          id="email"
-          name="email"
-          type="text"
-          placeholder="example@email.ru"
-        />
+        <div class="form_col">
+          <div class="form_item">
+            <label for="email">Почта</label>
+            <input
+              required
+              id="email"
+              name="email"
+              type="text"
+              placeholder="example@email.ru"
+            />
+          </div>
 
-        <label for="name">Имя</label>
-        <input required id="name" name="name" type="text" placeholder="Иван" />
+          <div class="form_item">
+            <label for="password">Пароль</label>
+            <input
+              required
+              id="password"
+              name="password"
+              type="password"
+              placeholder="********"
+            />
+          </div>
 
-        <label for="secondName">Фамилия</label>
-        <input
-          required
-          id="secondName"
-          name="secondName"
-          type="text"
-          placeholder="Иван"
-        />
+          <div class="form_item">
+            <label for="password-confirmed">Повторите пароль</label>
+            <input
+              required
+              id="password-confirmed"
+              name="password-confirmed"
+              type="password"
+              placeholder="********"
+            />
+          </div>
 
-        <label>Пол</label>
-        <label> <input name="sex" type="radio" checked /> Мужской</label>
-        <label> <input name="sex" type="radio" /> Женский</label>
+          <div class="form_item">
+            <label for="family-photo">Семейное фото</label>
+            <input required type="file" hidden multiple />
+            <div class="upload-photo">Загрузите фото до 5мб</div>
+          </div>
 
-        <button>+ Добавить участника</button>
+          <div class="form_item">
+            <label for="password"
+              ><input
+                required
+                id="hadnle_data"
+                name="hadnle_data"
+                type="checkbox"
+              />
+              Согласие на обработку личных данных</label
+            >
+          </div>
+        </div>
 
-        <label for="password">Пароль</label>
-        <input
-          required
-          id="password"
-          name="password"
-          type="password"
-          placeholder="********"
-        />
+        <div class="form_col">
+          <div class="form_item">
+            <label for="name">Имя</label>
+            <input
+              required
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Иван"
+            />
+          </div>
 
-        <label for="password-confirmed">Повторите пароль</label>
-        <input
-          required
-          id="password-confirmed"
-          name="password-confirmed"
-          type="password"
-          placeholder="********"
-        />
+          <div class="form_item">
+            <label for="secondName">Фамилия</label>
+            <input
+              required
+              id="secondName"
+              name="secondName"
+              type="text"
+              placeholder="Иванов"
+            />
+          </div>
 
-        <label for="family-photo">Семейное фото</label>
-        <input required type="file" />
+          <div class="form_item">
+            <label for="age">Возвраст</label>
+            <input
+              required
+              id="age"
+              name="age"
+              type="number"
+              placeholder="20"
+            />
+          </div>
 
-        <input required id="hadnle_data" name="hadnle_data" type="checkbox" />
-        <label for="password">Согласие на обработку личных данных</label>
+          <div class="form_item">
+            <label for="sex"> Пол </label>
+            <select required="sex" id="sex">
+              <option value="man">Мужской</option>
+              <option value="woman">Женский</option>
+            </select>
+          </div>
 
-        <button>Зарегистрироваться</button>
-        <div class="error">Пароли не совпадают</div>
+          <button type="button">+ Добавить участника</button>
+        </div>
+
+        <div class="form_item">
+          <div class="error">
+            Ошибки: <br />
+            - Пароли не совпадают
+          </div>
+          <button class="form_submit">Зарегистрироваться</button>
+        </div>
       </form>
     </section>
   </body>

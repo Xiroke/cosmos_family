@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary: #5075bf;
-  --background: #0f0f0f;
+  --primary: #5385e9;
+  --background: #0a0a0a;
   --foreground: #eaeaea;
   --foregound-muted: #aeaeae;
   --interactive: #1b1b1b;
-  --card: #2e2e2e;
-  --card-hover: #505050;
+  --card: #171717;
+  --card-light: #212121;
+  --card-light-hover: #262626;
   --border: #4a4a4a;
   scroll-behavior: smooth;
+
+  --pink: #b72db7;
+  --green: #31a311;
+  --yellow: #afa125;
+  --orange: #d76b31;
+  --blue: #3e8ded;
 }
 
 body {
@@ -23,14 +30,20 @@ body {
 a {
   color: var(--foreground);
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
+  display: block;
+  top: 0;
+  position: sticky;
   height: 50px;
-  background: var(--card);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  backdrop-filter: blur(10px);
 }
 
 header svg {
@@ -46,11 +59,21 @@ header nav {
 
 header nav a {
   border-radius: 4px;
-  padding: 12px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 header nav a:hover {
-  background: var(--card-hover);
+  background: var(--card-light);
+}
+
+.menu {
+  display: none;
+}
+
+.menu img {
+  filter: invert(1);
 }
 
 h1 {
@@ -62,32 +85,44 @@ h2 {
   font-size: 28px;
 }
 
-h3 {
+label {
+  font-size: 14px;
+  font-weight: 600;
 }
 
-h4 {
-}
-
-h5 {
-}
-
-input[type="text"],
-input[type="password"] {
+input,
+select {
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   height: 32px;
   width: 260px;
   border-radius: 8px;
   padding: 0;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid var(--border);
-  background-color: var(--interactive);
+  background-color: var(--card-light);
   color: var(--foregound);
   padding-block: 4px;
   padding-inline: 12px;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 button {
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   height: 32px;
   width: 260px;
@@ -96,12 +131,28 @@ button {
   padding-inline: 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background-color: var(--interactive);
+  background-color: var(--card-light);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: var(--card-light-hover);
 }
 
 .btn-sm {
   height: 32px;
   width: auto;
+}
+
+.btn-ghost {
+  background: inherit;
+  color: var(--foreground);
+  border: none;
+}
+
+.btn-ghost:hover {
+  background-color: var(--card-light);
 }
 
 .btn-inverse {
@@ -111,12 +162,18 @@ button {
 
 form {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   flex-direction: column;
+  width: 260px;
+  background-color: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
 }
 
-form h2 {
-  margin-bottom: 8px;
+form h3 {
+  margin: 0 0 16px 0;
+  color: var(--primary);
 }
 
 .form_item {
@@ -140,8 +197,87 @@ form h2 {
 }
 
 .avatar {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   border-radius: 99999px;
   object-fit: cover;
+  background-color: var(--card-light);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid var(--border);
+}
+
+.avatar_card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: start;
+}
+.error {
+  color: #e53232;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.accordion-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  color: var(--foregound);
+  border-radius: 99999px;
+  font-size: 32px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.not-found {
+  background-color: var(--card);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  max-width: 400px;
+  text-align: center;
+}
+
+.for-print {
+  display: none;
+}
+
+@media print {
+  .for-print {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }

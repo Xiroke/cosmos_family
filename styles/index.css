@@ -22,17 +22,37 @@ section {
   display: inline-block;
   position: relative;
   margin: 0 auto;
+  height: fit-content;
+  width: fit-content;
 }
 
-.competitions-slider_current img {
+.competitions-slider_current_img {
   opacity: 0.6;
   border-radius: 18px;
+}
+
+.competitions-slider_current .details {
+  height: fit-content;
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
 }
 
 .competitions-slider_current h3 {
   position: absolute;
   bottom: 0;
   left: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  max-width: 60%;
+}
+
+.competitions-slider_current h3 img {
+  margin-left: 16px;
+  stroke: gold;
 }
 
 .competitions-slider .dots {
@@ -52,27 +72,14 @@ section {
   background-color: var(--primary);
 }
 
-.competitions-slider .arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: var(--primary);
-  color: var(--background);
-  border-radius: 99999px;
-  font-size: 32px;
-  font-weight: 800;
-}
-
-.competitions-slider .arrow-left {
+.competitions-slider .accordion-arrow-left {
   position: absolute;
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.competitions-slider .arrow-right {
+.competitions-slider .accordion-arrow-right {
   position: absolute;
   right: 20px;
   top: 50%;
@@ -128,9 +135,17 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.competitions_top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .competitions table {
+  margin-top: 12px;
   width: 100%;
   text-align: center;
 }
@@ -160,18 +175,18 @@ section {
   margin-bottom: 60px;
 }
 
+.reviews_accordion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .reviews_data {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 12px;
   justify-content: center;
-}
-
-.review_top {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: start;
 }
 
 .accept {
@@ -191,9 +206,100 @@ footer {
 footer .footer-col {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 12px;
 }
 
 footer .footer-col a {
   color: var(--foregound-muted);
+}
+
+@media (max-width: 1400px) {
+  .competitions-slider_current_img {
+    width: 100%;
+  }
+
+  .hello video {
+    border-radius: 12px;
+    width: 60%;
+  }
+
+  .reviews_data .review:nth-last-child(-n + 1) {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  section {
+    padding: 0 12%;
+  }
+  .competitions .tb_photo img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hello video {
+    width: 70%;
+  }
+
+  section {
+    padding: 0 8%;
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hello video {
+    width: 90%;
+  }
+
+  .competitions table thead {
+    display: none;
+  }
+
+  .competitions table tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 60px;
+  }
+
+  .reviews_data .review:nth-last-child(-n + 2) {
+    display: none;
+  }
+
+  section {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .competitions-slider_current .details {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .competitions-slider .accordion-arrow-left {
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .competitions-slider .accordion-arrow-right {
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
